@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run lint)",
+      "Bash(npx tsc:*)",
+      "Bash(npx expo start:*)",
+      "Bash(npm start)",
+      "Bash(mkdir:*)",
+      "Bash(del \"C:\\Users\\Amir Ezzeddine\\Workarea\\AI_Diamond_App\\components\\InfoCard.tsx\")",
+      "Bash(ls:*)",
+      "Bash(npx expo install:*)",
+      "WebFetch(domain:amirezze-diamond-cut-classifier.hf.space)",
+      "WebFetch(domain:amirezze-diamond-color-grading.hf.space)",
+      "Bash(git checkout:*)",
+      "WebFetch(domain:docs.roboflow.com)",
+      "Bash(npm uninstall:*)",
+      "Bash(del \"C:\\Users\\Amir Ezzeddine\\Workarea\\AI_Diamond_App\\components\\DiamondScannerVision.tsx\")",
+      "Bash(del \"C:\\Users\\Amir Ezzeddine\\Workarea\\AI_Diamond_App\\VISION_CAMERA_MIGRATION.md\")",
+      "Bash(del \"C:\\Users\\Amir Ezzeddine\\Workarea\\AI_Diamond_App\\setup-vision-camera.bat\")",
+      "Bash(del \"C:\\Users\\Amir Ezzeddine\\Workarea\\AI_Diamond_App\\setup-vision-camera.sh\")",
+      "Bash(del \"C:\\Users\\Amir Ezzeddine\\Workarea\\AI_Diamond_App\\components\\CameraComparison.tsx\")",
+      "Bash(rm:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

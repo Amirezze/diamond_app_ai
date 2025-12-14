@@ -1,53 +1,81 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
+// Theme configuration for AI Diamond App
+// Luxury color scheme with dark charcoal and rich gold
 
-import { Platform } from 'react-native';
+export const lightTheme = {
+  background: '#ffffff',        // Pure white background
+  foreground: '#1e2024',        // Luxury Dark - Deep charcoal black
+  primary: '#e4c078',           // Luxury Gold - Rich gold for accents
+  accent: '#333944',            // Luxury Accent - Dark slate for secondary elements
+  secondary: '#f8f8f8',         // Very light gray
+  muted: '#f5f5f5',             // Subtle gray tint
+  border: '#e5e5e5',            // Soft gray border
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
-export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+  // Text colors
+  text: {
+    primary: '#1e2024',         // Luxury Dark
+    secondary: '#333944',       // Luxury Accent
+    muted: '#6b7280',
   },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+
+  // Gold colors
+  gold: {
+    primary: '#e4c078',         // Luxury Gold
+    light: '#fce588',           // Luxury Gold Light
+  },
+
+  // Gradients
+  gradients: {
+    primary: ['#e4c078', '#fce588'],         // Rich gold to light gold
+    background: ['#ffffff', '#f8f8f8'],      // White to light gray
+    hero: ['#333944', '#1e2024'],            // Dark slate to luxury dark
+  },
+
+  // Shadow colors
+  shadows: {
+    primary: 'rgba(228, 192, 120, 0.25)',   // Gold shadow
+    dark: 'rgba(30, 32, 36, 0.15)',         // Dark shadow
   },
 };
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
+export const darkTheme = {
+  background: '#1e2024',        // Luxury Dark - Deep charcoal black
+  foreground: '#ffffff',        // Pure white
+  primary: '#e4c078',           // Luxury Gold
+  accent: '#333944',            // Luxury Accent
+  secondary: '#2a2c31',         // Slightly lighter than background
+  muted: '#333944',             // Dark slate
+  border: '#3a3d45',            // Dark borders
+
+  // Text colors
+  text: {
+    primary: '#ffffff',
+    secondary: '#e5e5e5',
+    muted: '#9ca3af',
   },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
+
+  // Gold colors
+  gold: {
+    primary: '#e4c078',         // Luxury Gold
+    light: '#fce588',           // Luxury Gold Light
   },
-  web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
-    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+
+  // Gradients
+  gradients: {
+    primary: ['#e4c078', '#fce588'],         // Rich gold to light gold
+    background: ['#1e2024', '#2a2c31'],      // Luxury dark to lighter
+    hero: ['#333944', '#1e2024'],            // Dark slate to luxury dark
   },
-});
+
+  // Shadow colors
+  shadows: {
+    primary: 'rgba(228, 192, 120, 0.3)',    // Gold shadow
+    dark: 'rgba(0, 0, 0, 0.4)',             // Darker shadow
+  },
+};
+
+// Default to light theme
+export const theme = lightTheme;
+
+// Export types for TypeScript
+export type Theme = typeof lightTheme;
+export type ThemeColors = keyof typeof lightTheme;
